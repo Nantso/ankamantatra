@@ -1,5 +1,7 @@
-   **Malagasy**
+**Malagasy**
 # Ankamantatra Malagasy
+
+![](assets/2021-10-05-16-57-36.png)
 
 Ankamantatra Malagasy dia misy ireo lisitrin'ny ankamantatra Malagasy izay nilalaovan-tsika fahakely.
 
