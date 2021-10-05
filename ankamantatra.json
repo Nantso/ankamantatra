@@ -3,5 +3,10 @@
         "question": "Le mahia mianki-ndrindrina",
         "answer": "Sahafa",
         "possiblities": ["Saafa","Sahaf","Saaf"]
+    },
+        {
+        "question": "Hoano aho hinanako anao",
+        "answer": "Sakay",
+        "possiblities": ["sakay"]
     }
 ]
