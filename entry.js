@@ -30,6 +30,16 @@ function checkResponse(response, possiblities) {
 }
 
 /**
+ * Get the correct answer of question
+ * @param {string} question The riddle
+ * @param {{question: string, answer: string, possibilities: string[]}[]} data Riddle data
+ * @returns {string} answer
+ */
+function getCorrectAnswer(question, data) {
+    return data.find(riddle => riddle.question === question).answer;
+}
+
+/**
  * @param {boolean} response
  * @returns {string}
  */
@@ -59,6 +69,14 @@ function input(message = ">", newLine = false) {
             rl.close();
         }
     });
+}
+/**
+ * Check if the answer agrees or not
+ * @param {string} answer The answer to check
+ * @returns {boolean} true if answer agree
+ */
+function isAgree(answer) {
+    return !(['t', 'tsia', 'aaa', 'a3', 'tsy', 'ts'].includes(answer.toLowerCase()));
 }
 
 /**
@@ -122,21 +140,32 @@ async function main() {
         const q = getRandomQuestion(data);
         console.log(`INONA ARY IZAO: ${colorText(q.question, colors.YELLOW)} ?`);
         let userInput = await input();
-        if (!userInput.length) {
-            continue loop;
-        }
-        q.possiblities.push(q.answer); // Add the answer to the possiblities list
-        const response = formatResponse(checkResponse(userInput, q.possiblities));
-        const a = loadingAnimation("Miandrasa kely ...");
-        const t = await sleep(1000);
-        clearTimeout(t);
-        clearInterval(a);
-        console.log(`\n${response}`);
+        let satisfied = false;
+        find: do {
+            if (!userInput.length) {
+                continue loop;
+            }
+            q.possiblities.push(q.answer); // Add the answer to the possiblities list
+            let checked = checkResponse(userInput, q.possiblities);
+            const response = formatResponse(checked);
+            const a = loadingAnimation("Miandrasa kely ...");
+            const t = await sleep(1000);
+            clearTimeout(t);
+            clearInterval(a);
+            console.log(`\n${response}`);
+            if (!checked) {
+                userInput = await input(`Afapo ve ianao? ${colorText("(ENY/TSIA)", colors.CYAN)}\n`);
+                if (isAgree(userInput)) {
+                    console.log(`${colorText(getCorrectAnswer(q.question, data), colors.GREEN)} nefaaaa 😬😅`);
+                } else {
+                    userInput = await input("Dia inona ary... ");
+                    continue find;
+                }
+            }
+            satisfied = true;
+        } while (!satisfied);
         userInput = await input(`MBOLA HANOY VE IANAO ? ${colorText("(ENY/Tsia)", colors.MANGETA)}\n>`);
-        if (
-            ['t', 'tsia', 'aaa', 'a3', 'tsy', 'ts']
-                .includes(userInput.toLowerCase())
-        ) {
+        if (!isAgree(userInput)) {
             console.log(colorText(`VELOMA ✋ !`, colors.BLUE, true));
             play = false;
         }
