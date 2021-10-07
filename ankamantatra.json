@@ -8,5 +8,10 @@
         "question": "Hoano aho hinanako anao",
         "answer": "Sakay",
         "possiblities": ["sakay"]
+    },
+    {
+        "question": "Elo be tsy mipika",
+        "answer": "Lanitra",
+        "possiblities": ["lanitra","lanitr"]
     }
 ]
