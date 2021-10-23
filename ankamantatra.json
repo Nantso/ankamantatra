@@ -17,12 +17,12 @@
     {
     "question": "Dobon'Andriamanitra tsy azo ilomanosana",
     "answer": "Maso",
-    "possiblitiaes": []
+    "possiblitiaes": ["maso"]
     },
     {
         "question": "Lohany kolekole,vatany batao vy be",
         "answer": "sokatra",
-        "possiblities": ["sokatra"]
+        "possiblities": ["Sokatra"]
     },
     {
         "question": "Ny Ray aman-dReny mitsangana,ny zanaka mitsivalana",
@@ -37,6 +37,6 @@
     {
         "question": "Tsy mahasaraka nefa tsy azo ho namana",
         "answer": "Aloka",
-        "possiblities": []
+        "possiblities": ["aloka"]
     }
 ]
