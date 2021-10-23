@@ -28,6 +28,15 @@
         "question": "Ny Ray aman-dReny mitsangana,ny zanaka mitsivalana",
         "answer": "Tohatra",
         "possiblities": ["toatra"]
+    },
+    {
+        "question": "Tsy nify tsy vazana nefa tsy mandà sakafo",
+        "answer": "Afo",
+        "possiblities": ["Afo","motro"]
+    },
+    {
+        "question": "Tsy mahasaraka nefa tsy azo ho namana",
+        "answer": "Aloka",
+        "possiblities": []
     }
-
 ]
