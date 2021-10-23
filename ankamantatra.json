@@ -13,5 +13,21 @@
         "question": "Elo be tsy mipika",
         "answer": "Lanitra",
         "possiblities": ["lanitra","lanitr"]
+    },
+    {
+    "question": "Dobon'Andriamanitra tsy azo ilomanosana",
+    "answer": "Maso",
+    "possiblitiaes": []
+    },
+    {
+        "question": "Lohany kolekole,vatany batao vy be",
+        "answer": "sokatra",
+        "possiblities": ["sokatra"]
+    },
+    {
+        "question": "Ny Ray aman-dReny mitsangana,ny zanaka mitsivalana",
+        "answer": "Tohatra",
+        "possiblities": ["toatra"]
     }
+
 ]
