@@ -13,5 +13,30 @@
         "question": "Elo be tsy mipika",
         "answer": "Lanitra",
         "possiblities": ["lanitra","lanitr"]
+    },
+    {
+    "question": "Dobon'Andriamanitra tsy azo ilomanosana",
+    "answer": "Maso",
+    "possiblitiaes": ["maso"]
+    },
+    {
+        "question": "Lohany kolekole,vatany batao vy be",
+        "answer": "sokatra",
+        "possiblities": ["Sokatra"]
+    },
+    {
+        "question": "Ny Ray aman-dReny mitsangana,ny zanaka mitsivalana",
+        "answer": "Tohatra",
+        "possiblities": ["toatra"]
+    },
+    {
+        "question": "Tsy nify tsy vazana nefa tsy mandà sakafo",
+        "answer": "Afo",
+        "possiblities": ["Afo","motro"]
+    },
+    {
+        "question": "Tsy mahasaraka nefa tsy azo ho namana",
+        "answer": "Aloka",
+        "possiblities": ["aloka"]
     }
 ]
