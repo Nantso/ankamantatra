@@ -38,5 +38,10 @@
         "question": "Tsy mahasaraka nefa tsy azo ho namana",
         "answer": "Aloka",
         "possiblities": ["aloka"]
+    },
+    {
+        "question": "Tezitra vao mifanantona",
+        "answer": "molotra",
+        "possiblities": ["Molotra","molotr"]
     }
 ]
