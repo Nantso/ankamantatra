@@ -132,11 +132,25 @@ function colorText(text, color = 0, bgColor) {
             return `\x1b[${start + color}m${t}\x1b[0m`
         }).join('');
 }
+/**
+ * return score
+ * @param response: {boolean}
+ * return {number}
+ */
+
+function countPoint(response){
+    if(response) 
+        return 1
+    return 0;  
+}
 
 async function main() {
     let play = true;
+    let point = 0;
+    let round = 0;
     const data = require("./ankamantatra.json");
     loop: while (play) {
+        round++;
         const q = getRandomQuestion(data);
         console.log(`INONA ARY IZAO: ${colorText(q.question, colors.YELLOW)} ?`);
         let userInput = await input();
@@ -147,6 +161,7 @@ async function main() {
             }
             q.possiblities.push(q.answer); // Add the answer to the possiblities list
             let checked = checkResponse(userInput, q.possiblities);
+            point += countPoint(checked); 
             const response = formatResponse(checked);
             const a = loadingAnimation("Miandrasa kely ...");
             const t = await sleep(1000);
@@ -166,7 +181,14 @@ async function main() {
         } while (!satisfied);
         userInput = await input(`MBOLA HANOY VE IANAO ? ${colorText("(ENY/Tsia)", colors.MANGETA)}\n>`);
         if (!isAgree(userInput)) {
+            if(point > 0)
+                console.log(colorText(`ISA:${point}/${round}`, colors.GREEN, true));
+            else
+                console.log(colorText(`ISA:${point}/${round}`, colors.RED, true));
+
+
             console.log(colorText(`VELOMA ✋ !`, colors.BLUE, true));
+
             play = false;
         }
     }
