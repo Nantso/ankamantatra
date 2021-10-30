@@ -43,5 +43,10 @@
         "question": "Tezitra vao mifanantona",
         "answer": "molotra",
         "possiblities": ["Molotra","molotr"]
+    },
+    {
+        "question": "Tsy marary,tsy marokoditra nefa mangovitra.",
+        "answer": "finday",
+        "possiblities": ["Finday","telefonina","telephone"]
     }
 ]
