@@ -17,7 +17,7 @@
     {
     "question": "Dobon'Andriamanitra tsy azo ilomanosana",
     "answer": "Maso",
-    "possiblitiaes": ["maso"]
+    "possiblities": ["maso"]
     },
     {
         "question": "Lohany kolekole,vatany batao vy be",
